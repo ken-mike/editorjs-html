@@ -5,6 +5,7 @@ export type transforms = {
   paragraph(block: block): string;
   list(block: block): string;
   image(block: block): string;
+  video(block: block): string;
   quote(block: block): string;
 };
 
@@ -52,6 +53,11 @@ const transforms: transforms = {
   image: ({ data }) => {
     let caption = data.caption ? data.caption : "Image";
     return `<img src="${data.file ? data.file.url : ""}" alt="${caption}" />`;
+  },
+
+  video: ({ data }) => {
+    let caption = data.caption ? data.caption : "Video";
+    return `<video src="${data.file ? data.file.url : ""}" alt="${caption}" />`;
   },
 
   quote: ({ data }) => {

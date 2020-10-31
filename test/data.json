@@ -98,6 +98,19 @@
               "withBackground" : false
           }
       }
+  ,
+      {
+          "type" : "video",
+          "data" : {
+              "file" : {
+                  "url" : "https://www.w3schools.com/html/mov_bbb.mp4"
+              },
+              "caption" : "",
+              "withBorder" : false,
+              "stretched" : false,
+              "withBackground" : false
+          }
+      }
   ],
   "version" : "2.17.0"
 }
