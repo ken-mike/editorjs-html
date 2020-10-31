@@ -57,7 +57,7 @@ const transforms: transforms = {
 
   video: ({ data }) => {
     let caption = data.caption ? data.caption : "Video";
-    return `<video src="${data.file ? data.file.url : ""}" alt="${caption}" />`;
+    return `<video src="${data.file ? data.file.url : ""}" alt="${caption}" controls/>`;
   },
 
   quote: ({ data }) => {
