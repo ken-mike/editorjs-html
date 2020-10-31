@@ -1,7 +1,7 @@
 {
   "name": "editorjs-html",
-  "version": "3.0.3",
-  "description": "",
+  "version": "3.0.4",
+  "description": "This package is another version of the one by pavittarx, supporting video blocks. ",
   "main": "build/edjsHTML.node.js",
   "scripts": {
     "test": "npm run build && node test/test",
@@ -14,7 +14,7 @@
     "json",
     "editorjs-html"
   ],
-  "author": "pavittarx",
+  "author": "ken-miike",
   "license": "MIT",
   "devDependencies": {
     "@babel/cli": "^7.8.4",
