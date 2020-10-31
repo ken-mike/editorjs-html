@@ -13,11 +13,11 @@ A utility to parse editorjs clean data to HTML.
 
 ### NPM 
 
-npm install editorjs-html
+npm install editorjs-html-revised
 
 ### CDN
-* https://cdn.jsdelivr.net/npm/editorjs-html@3.0.3/build/edjsHTML.js
-* (Browser Only Build): https://cdn.jsdelivr.net/npm/editorjs-html@3.0.3/build/edjsHTML.browser.js
+* https://cdn.jsdelivr.net/npm/editorjs-html-revised@3.0.4/build/edjsHTML.js
+* (Browser Only Build): https://cdn.jsdelivr.net/npm/editorjs-html-revised@3.0.4/build/edjsHTML.browser.js
 
 ## Usage
 
@@ -33,7 +33,7 @@ npm install editorjs-html
 ### Nodejs
 
 ```js
-  const edjsHTML = require("editorjs-html");
+  const edjsHTML = require("editorjs-html-revised");
   const edjsParser = edjsHTML();
   const html = edjsParser.parse(editorjs_clean_data);
 
