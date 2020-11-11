@@ -7,6 +7,7 @@ export declare type transforms = {
     image(block: block): string;
     video(block: block): string;
     quote(block: block): string;
+    linkTool(block: block): string;
 };
 export declare type block = {
     type: string;
@@ -22,6 +23,11 @@ export declare type block = {
         withBorder?: boolean;
         items?: string[];
         style?: string;
+        link?: string;
+        meta?: {
+            title?: string;
+            description?: string;
+        };
     };
 };
 declare const transforms: transforms;

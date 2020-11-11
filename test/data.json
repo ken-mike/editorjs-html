@@ -87,18 +87,17 @@
           }
       },
       {
-          "type" : "image",
-          "data" : {
-              "file" : {
-                  "url" : "https://codex.so/public/app/img/external/codex2x.png"
+          "type": "image",
+          "data": {
+              "file": {
+                  "url": "https://codex.so/public/app/img/external/codex2x.png"
               },
-              "caption" : "",
-              "withBorder" : false,
-              "stretched" : false,
-              "withBackground" : false
+              "caption": "",
+              "withBorder": false,
+              "stretched": false,
+              "withBackground": false
           }
-      }
-  ,
+      },
       {
           "type" : "video",
           "data" : {
@@ -109,6 +108,16 @@
               "withBorder" : false,
               "stretched" : false,
               "withBackground" : false
+          }
+      },
+      {
+          "type" : "linkTool",
+          "data" : {
+              "link" : "https://codex.so",
+              "meta" : {
+                  "title" : "CodeX Team",
+                  "description" : "Club of web-development, design and marketing. We build team learning how to build full-valued projects on the world market."
+              }
           }
       }
   ],

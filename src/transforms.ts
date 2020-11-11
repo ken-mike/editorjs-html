@@ -7,6 +7,7 @@ export type transforms = {
   image(block: block): string;
   video(block: block): string;
   quote(block: block): string;
+  linkTool(block: block): string;
 };
 
 export type block = {
@@ -23,6 +24,11 @@ export type block = {
     withBorder?: boolean;
     items?: string[];
     style?: string;
+    link?: string;
+    meta?: {
+      title?: string;
+      description?: string
+    };
   };
 };
 
@@ -63,6 +69,20 @@ const transforms: transforms = {
   quote: ({ data }) => {
     return `<blockquote> ${data.text} </blockquote> - ${data.caption}`;
   },
+
+  linkTool: ({ data }) => {
+    let linkPreviewElement: string[] = [];
+
+    if (data.meta?.title) {
+      linkPreviewElement.push(`<div class=\"link-tool__title\">${data.meta?.title}</div>`)
+    }
+
+    if (data.meta?.description) {
+      linkPreviewElement.push(`<p class=\"link-tool__description\">${data.meta?.description}</p>`)
+    }
+
+    return `<div class=\"link-tool\"><a class=\"link-tool__content link-tool__content--rendered\" target=\"_blank\" rel=\"nofollow noindex noreferrer\" href=\"${data.link}\">${linkPreviewElement.join('')}<span class=\"link-tool__anchor\">${data.link}</span></a></div>`
+  }
 };
 
 export default transforms;
