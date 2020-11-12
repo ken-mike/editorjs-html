@@ -7,7 +7,7 @@ export declare type transforms = {
     image(block: block): string;
     video(block: block): string;
     quote(block: block): string;
-    linkTool(block: block): string;
+    link(block: block): string;
 };
 export declare type block = {
     type: string;
