@@ -7,7 +7,7 @@ export type transforms = {
   image(block: block): string;
   video(block: block): string;
   quote(block: block): string;
-  linkTool(block: block): string;
+  link(block: block): string;
 };
 
 export type block = {
@@ -70,7 +70,7 @@ const transforms: transforms = {
     return `<blockquote> ${data.text} </blockquote> - ${data.caption}`;
   },
 
-  linkTool: ({ data }) => {
+  link: ({ data }) => {
     let linkPreviewElement: string[] = [];
 
     if (data.meta?.title) {

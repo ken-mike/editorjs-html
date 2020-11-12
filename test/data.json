@@ -111,12 +111,30 @@
           }
       },
       {
-          "type" : "linkTool",
+          "type" : "link",
           "data" : {
               "link" : "https://codex.so",
               "meta" : {
                   "title" : "CodeX Team",
                   "description" : "Club of web-development, design and marketing. We build team learning how to build full-valued projects on the world market."
+              }
+          }
+      },
+      {
+          "type" : "link",
+          "data" : {
+              "link" : "https://codex.so",
+              "meta" : {
+                  "description" : "Club of web-development, design and marketing. We build team learning how to build full-valued projects on the world market."
+              }
+          }
+      },
+      {
+          "type" : "link",
+          "data" : {
+              "link" : "https://codex.so",
+              "meta" : {
+                  "title" : "CodeX Team"
               }
           }
       }
