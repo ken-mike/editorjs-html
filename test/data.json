@@ -99,6 +99,18 @@
           }
       },
       {
+          "type": "image",
+          "data": {
+              "file": {
+                  "url": "https://codex.so/public/app/img/external/codex2x.png"
+              },
+              "caption": "This is some meaningful image",
+              "withBorder": false,
+              "stretched": false,
+              "withBackground": false
+          }
+      },
+      {
           "type" : "video",
           "data" : {
               "file" : {

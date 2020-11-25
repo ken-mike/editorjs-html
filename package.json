@@ -1,6 +1,6 @@
 {
   "name": "editorjs-html-revised",
-  "version": "3.0.8",
+  "version": "3.0.9",
   "description": "This package is another version of the one by pavittarx, supporting video blocks. ",
   "main": "build/edjsHTML.node.js",
   "scripts": {

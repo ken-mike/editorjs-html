@@ -57,8 +57,10 @@ const transforms: transforms = {
   },
 
   image: ({ data }) => {
-    let caption = data.caption ? data.caption : "Image";
-    return `<img src="${data.file ? data.file.url : ""}" alt="${caption}" />`;
+    let imgTag = `<img src="${data.file ? data.file.url : ""}" alt="${data.caption}" />`;
+
+    if (data.caption !== '') imgTag += `<p class="module-image-caption">${data.caption}</p>`
+    return imgTag
   },
 
   video: ({ data }) => {
