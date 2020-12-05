@@ -64,8 +64,10 @@ const transforms: transforms = {
   },
 
   video: ({ data }) => {
-    let caption = data.caption ? data.caption : "Video";
-    return `<video controls src="${data.file ? data.file.url : ""}" alt="${caption}" />`;
+    let videoTag = `<video controls src="${data.file ? data.file.url : ""}" alt="${data.caption}" />`;
+
+    if (data.caption !== '') videoTag += `<p class="module-video-caption">${data.caption}</p>`
+    return videoTag
   },
 
   quote: ({ data }) => {

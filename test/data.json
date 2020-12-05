@@ -123,6 +123,18 @@
           }
       },
       {
+          "type" : "video",
+          "data" : {
+              "file" : {
+                  "url" : "https://www.w3schools.com/html/mov_bbb.mp4"
+              },
+              "caption" : "Cap",
+              "withBorder" : false,
+              "stretched" : false,
+              "withBackground" : false
+          }
+      },
+      {
           "type" : "link",
           "data" : {
               "link" : "https://codex.so",
