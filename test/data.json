@@ -117,8 +117,8 @@
               "meta" : {
                   "title" : "CodeX Team",
                   "description" : "Club of web-development, design and marketing. We build team learning how to build full-valued projects on the world market.",
-                  "img": {
-                      "url": "https://d2l930y2yx77uc.cloudfront.net/assets/default/default_top_ogp-60a76fb035b232dea633f7bb98cc22661718c4613e345744d6bcec0c1e03deb8.png"
+                  "image": {
+                      "url": "https://www.w3schools.com/css/img_5terre.jpg"
                   }
               }
           }
@@ -128,6 +128,20 @@
           "data" : {
               "link" : "https://codex.so",
               "meta" : {
+                  "title" : "CodeX Team",
+                  "description" : "Club of web-development, design and marketing. We build team learning how to build full-valued projects on the world market.",
+                  "image": {
+                      "url": ""
+                  }
+              }
+          }
+      },
+      {
+          "type" : "link",
+          "data" : {
+              "link" : "https://codex.so",
+              "meta" : {
+                  "title" : "CodeX Team",
                   "description" : "Club of web-development, design and marketing. We build team learning how to build full-valued projects on the world market."
               }
           }
@@ -137,7 +151,6 @@
           "data" : {
               "link" : "https://codex.so",
               "meta" : {
-                  "title" : "CodeX Team"
               }
           }
       }
