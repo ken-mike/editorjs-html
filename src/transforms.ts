@@ -27,7 +27,10 @@ export type block = {
     link?: string;
     meta?: {
       title?: string;
-      description?: string
+      description?: string;
+      img?: {
+        url?: string
+      }
     };
   };
 };
@@ -76,6 +79,10 @@ const transforms: transforms = {
 
   link: ({ data }) => {
     let linkPreviewElement: string[] = [];
+
+    if (data.meta?.img !== null && data.meta?.img?.url) {
+      linkPreviewElement.push(`<div class="link-tool__image" style="background-image: url(&quot;${data.meta.img.url}&quot;);"></div>`)
+    }
 
     if (data.meta?.title) {
       linkPreviewElement.push(`<div class=\"link-tool__title\">${data.meta?.title}</div>`)
