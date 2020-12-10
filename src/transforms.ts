@@ -28,7 +28,7 @@ export type block = {
     meta?: {
       title?: string;
       description?: string;
-      img?: {
+      image?: {
         url?: string
       }
     };
@@ -80,8 +80,8 @@ const transforms: transforms = {
   link: ({ data }) => {
     let linkPreviewElement: string[] = [];
 
-    if (data.meta?.img !== null && data.meta?.img?.url) {
-      linkPreviewElement.push(`<div class="link-tool__image" style="background-image: url(&quot;${data.meta.img.url}&quot;);"></div>`)
+    if (data.meta?.image !== null && data.meta?.image?.url) {
+      linkPreviewElement.push(`<div class="link-tool__image" style="background-image: url(&quot;${data.meta.image.url}&quot;);"></div>`)
     }
 
     if (data.meta?.title) {
