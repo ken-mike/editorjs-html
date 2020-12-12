@@ -153,6 +153,17 @@
               "meta" : {
               }
           }
+      },
+      {
+          "type":"embed",
+          "data":{
+              "service":"youtube",
+              "source":"https://www.youtube.com/watch?v=Lpt7JJWBsj0",
+              "embed":"https://www.youtube.com/embed/Lpt7JJWBsj0",
+              "width":580,
+              "height":320,
+              "caption":""
+          }
       }
   ],
   "version" : "2.17.0"

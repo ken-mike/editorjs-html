@@ -8,10 +8,15 @@ export declare type transforms = {
     video(block: block): string;
     quote(block: block): string;
     link(block: block): string;
+    embed(block: block): string;
 };
 export declare type block = {
     type: string;
     data: {
+        service?: string;
+        height?: number;
+        width?: number;
+        embed?: string;
         text?: string;
         level?: number;
         caption?: string;

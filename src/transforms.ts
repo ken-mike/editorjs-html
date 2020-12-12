@@ -8,11 +8,18 @@ export type transforms = {
   video(block: block): string;
   quote(block: block): string;
   link(block: block): string;
+  embed(block: block): string;
 };
 
 export type block = {
   type: string;
   data: {
+    service?: string;
+    // embedded YouTube data start here
+    height?: number;
+    width?: number;
+    embed?: string;
+    // and end here
     text?: string;
     level?: number;
     caption?: string;
@@ -93,6 +100,14 @@ const transforms: transforms = {
     }
 
     return `<div class=\"link-tool\"><a class=\"link-tool__content link-tool__content--rendered\" target=\"_blank\" rel=\"nofollow noindex noreferrer\" href=\"${data.link}\">${linkPreviewElement.join('')}<span class=\"link-tool__anchor\">${data.link}</span></a></div>`
+  },
+
+  embed: ({ data }) => {
+    if (data.service !== 'youtube') {
+      return ''
+    }
+
+    return `<iframe width="${data.width}" height="${data.height}" src="${data.embed}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
   }
 };
 
