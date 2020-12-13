@@ -107,7 +107,7 @@ const transforms: transforms = {
       return ''
     }
 
-    return `<iframe width="${data.width}" height="${data.height}" src="${data.embed}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+    return `<iframe width="${data.width}" height="${data.height}" src="${data.embed}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p class="embed-youtube-caption">${data.caption}</p>`
   }
 };
 
