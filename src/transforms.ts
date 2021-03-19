@@ -1,3 +1,5 @@
+import { URL_REGEX, MAIL_REGEX } from "./constants";
+
 export type transforms = {
   [key: string]: any;
   delimiter(): string;
@@ -52,7 +54,23 @@ const transforms: transforms = {
   },
 
   paragraph: ({ data }) => {
-    return `<p> ${data.text} </p>`;
+    const text = data.text || ''
+    const text_with_urls_converted_to_links = text.replace(URL_REGEX, (s) => {
+      if (MAIL_REGEX.test(s)) {
+        return s; // leave as-is
+      } else {
+        let url = ''
+        if (!/^https?:\/\//.test(s)) {
+          url = 'https://' + s
+        }
+        return `<a href="${url}" target="_blank">${url}</a>`;
+      }
+    })
+    const text_with_mail_addrs_converted_to_links = text_with_urls_converted_to_links.replace(
+        MAIL_REGEX,
+        '<a href="mailto:$&" target="_blank">$&</a>'
+    )
+    return `<p> ${text_with_mail_addrs_converted_to_links} </p>`;
   },
 
   list: ({ data }) => {
