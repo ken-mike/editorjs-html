@@ -59,7 +59,7 @@ const transforms: transforms = {
       if (MAIL_REGEX.test(s)) {
         return s; // leave as-is
       } else {
-        let url = ''
+        let url = s
         if (!/^https?:\/\//.test(s)) {
           url = 'https://' + s
         }
