@@ -157,7 +157,10 @@
       {
           "type" : "link",
           "data" : {
-              "link" : "user@example.com"
+              "link" : "user@example.com",
+              "meta" : {
+                  "title": "user@example.com"
+              }
           }
       },
       {
