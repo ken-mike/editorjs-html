@@ -37,6 +37,7 @@ export type block = {
     meta?: {
       title?: string;
       description?: string;
+      anchor?: string;
       image?: {
         url?: string
       }
@@ -88,6 +89,7 @@ const transforms: transforms = {
 
   link: ({ data }) => {
     const linkText = data.link || ''
+    const anchorText = data.meta?.anchor || data.link
     let linkPreviewElement: string[] = [];
     if (data.meta?.image && data.meta?.image?.url) {
       linkPreviewElement.push(`<div class="link-tool__image" style="background-image: url(&quot;${data?.meta?.image?.url}&quot;);"></div>`)
@@ -102,10 +104,10 @@ const transforms: transforms = {
     }
 
     if (MAIL_REGEX.test(linkText)) {
-      return `<div class=\"link-tool\"><a class=\"link-tool__content link-tool__content--rendered\" target=\"_blank\" href=\"mailto:${linkText}\">${linkPreviewElement.join('')}<span class=\"link-tool__anchor\">こちらのメールアドレスにメールを送る</span></a></div>`
+      return `<div class=\"link-tool\"><a class=\"link-tool__content link-tool__content--rendered\" target=\"_blank\" href=\"mailto:${linkText}\">${linkPreviewElement.join('')}<span class=\"link-tool__anchor\">${anchorText}</span></a></div>`
     }
 
-    return `<div class=\"link-tool\"><a class=\"link-tool__content link-tool__content--rendered\" target=\"_blank\" rel=\"nofollow noindex noreferrer\" href=\"${data.link}\">${linkPreviewElement.join('')}<span class=\"link-tool__anchor\">${data.link}</span></a></div>`
+    return `<div class=\"link-tool\"><a class=\"link-tool__content link-tool__content--rendered\" target=\"_blank\" rel=\"nofollow noindex noreferrer\" href=\"${data.link}\">${linkPreviewElement.join('')}<span class=\"link-tool__anchor\">${anchorText}</span></a></div>`
   },
 
   embed: ({ data }) => {

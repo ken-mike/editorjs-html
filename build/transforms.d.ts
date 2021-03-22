@@ -32,6 +32,7 @@ export declare type block = {
         meta?: {
             title?: string;
             description?: string;
+            anchor?: string;
             image?: {
                 url?: string;
             };

@@ -159,6 +159,7 @@
           "data" : {
               "link" : "user@example.com",
               "meta" : {
+                  "anchor": "このメールアドレスにメールを送る",
                   "title": "user@example.com"
               }
           }
