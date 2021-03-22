@@ -102,7 +102,6 @@ const transforms: transforms = {
     }
 
     if (MAIL_REGEX.test(linkText)) {
-      linkPreviewElement.push(`<div class=\"link-tool__title\">${linkText}</div>`)
       return `<div class=\"link-tool\"><a class=\"link-tool__content link-tool__content--rendered\" target=\"_blank\" href=\"mailto:${linkText}\">${linkPreviewElement.join('')}<span class=\"link-tool__anchor\">こちらのメールアドレスにメールを送る</span></a></div>`
     }
 
