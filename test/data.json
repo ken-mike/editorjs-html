@@ -155,6 +155,12 @@
           }
       },
       {
+          "type" : "link",
+          "data" : {
+              "link" : "user@example.com"
+          }
+      },
+      {
           "type":"embed",
           "data":{
               "service":"youtube",
@@ -174,12 +180,6 @@
               "width":580,
               "height":320,
               "caption":"キャプションあり"
-          }
-      },
-      {
-          "type" : "paragraph",
-          "data" : {
-              "text" : "https://example.com?param=1 is an example URL. ex.ample2@example.com is an email. example.com?param=1 is an example URL."
           }
       }
   ],
